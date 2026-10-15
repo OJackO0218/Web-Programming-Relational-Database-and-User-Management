@@ -1,8 +1,6 @@
 <?php
-// create.php
 include 'auth.php';
 include 'config.php';
-// Load the majors for the dropdown
 $majors = mysqli_query($conn, "SELECT id, name FROM majors ORDER BY name");
 if (isset($_POST['submit'])) {
     $nim = $_POST['nim'];
@@ -13,7 +11,7 @@ if (isset($_POST['submit'])) {
     mysqli_stmt_bind_param($stmt, "ssi", $nim, $name, $major_id);
     mysqli_stmt_execute($stmt);
     header("Location: index.php");
-    exit; // Stop the script after redirecting
+    exit;
 }
 ?>
 <!DOCTYPE html>
