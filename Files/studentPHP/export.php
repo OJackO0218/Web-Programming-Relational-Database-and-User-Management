@@ -1,7 +1,5 @@
 <?php
-// export.php
 include 'config.php';
-// Memaksa browser mendownload berkas sebagai file Excel (.xls)
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=Laporan_Mahasiswa.xls");
 header("Pragma: no-cache");
