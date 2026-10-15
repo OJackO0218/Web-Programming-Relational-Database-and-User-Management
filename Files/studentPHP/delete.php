@@ -1,8 +1,7 @@
 <?php
-// delete.php
 include 'auth.php';
 include 'config.php';
-require_admin(); // Staff typing the URL directly are rejected (403)
+require_admin();
 if (isset($_GET['id'])) {
  $id = $_GET['id'];
  $stmt = mysqli_prepare($conn, "DELETE FROM students WHERE id = ?");
