@@ -1,9 +1,7 @@
 <?php
-// edit.php
 include 'auth.php';
 include 'config.php';
 $id = $_GET['id'];
-// Load the student being edited
 $stmt = mysqli_prepare($conn, "SELECT * FROM students WHERE id = ?");
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
