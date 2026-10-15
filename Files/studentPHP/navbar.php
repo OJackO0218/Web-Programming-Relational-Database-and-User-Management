@@ -1,4 +1,4 @@
-<?php // navbar.php — include right after the <body> tag 
+<?php // navbar.php
 ?>
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
