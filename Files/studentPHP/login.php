@@ -2,7 +2,6 @@
 // login.php
 session_start();
 include 'config.php';
-// Already logged in? Go straight to the dashboard
 if (isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
@@ -24,7 +23,6 @@ WHERE username = ?");
         header("Location: index.php");
         exit;
     } else {
-        // Deliberately vague: don't reveal which field was wrong
         $error = "Incorrect username or password.";
     }
 }
