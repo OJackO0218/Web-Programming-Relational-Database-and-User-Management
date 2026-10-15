@@ -1,8 +1,7 @@
 <?php
-// config.php
 $host = "localhost";
-$user = "root"; // Username bawaan XAMPP
-$pass = ""; // Password bawaan XAMPP (kosong)
+$user = "root";
+$pass = "";
 $db = "db_school";
 $conn = mysqli_connect($host, $user, $pass, $db);
 if (!$conn) {
