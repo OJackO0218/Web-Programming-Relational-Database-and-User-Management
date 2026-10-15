@@ -24,7 +24,6 @@ if (isset($_POST['add_user'])) {
             mysqli_stmt_execute($stmt);
             $message = "<div class='alert alert-success'>User added successfully.</div>";
         } catch (mysqli_sql_exception $e) {
-            // Error 1062 = duplicate value in a UNIQUE column (username)
             $message = "<div class='alert alert-danger'>Username is already taken.</div>";
         }
     }
@@ -47,7 +46,6 @@ $users = mysqli_query($conn, "SELECT id, username, role FROM users ORDER BY id")
     <div class="container mt-4">
         <?= $message ?>
         <div class="row g-4">
-            <!-- Add user form -->
             <div class="col-md-4">
                 <div class="card shadow-sm">
                     <div class="card-header bg-success text-white">
@@ -77,7 +75,6 @@ $users = mysqli_query($conn, "SELECT id, username, role FROM users ORDER BY id")
                     </div>
                 </div>
             </div>
-            <!-- User list -->
             <div class="col-md-8">
                 <div class="card shadow-sm">
                     <div class="card-header bg-primary text-white">
